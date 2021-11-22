@@ -14,6 +14,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -102,7 +112,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/index.scss");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
+
+
+let luukut = [];
+
+for (let i = 0; i < 24; i++) {
+  const luukku = {
+    day: i + 1,
+    header: null,
+    content: null,
+    href: null
+  };
+  luukut.push(luukku);
+}
 
 wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
   title: 'Joulukalenteri',
@@ -111,7 +136,7 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
   attributes: {
     luukut: {
       type: 'array',
-      default: [{}]
+      default: luukut
     }
   },
   edit: AdminSide,
@@ -119,14 +144,26 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
     return null;
   }
 });
+console.log(luukut, 'asddasdsaa');
 
 function AdminSide(props) {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Lis\xE4\xE4 dataa joulukalenteriin"));
-}
+  function renderLuukut() {
+    return props.attributes.luukut.map(luukku => {
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, luukku.day, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+        value: luukku.content,
+        onChange: value => {
+          const uudetLuukut = props.attributes.luukut;
+          uudetLuukut[luukku.day - 1].content = value;
+          props.setAttributes({
+            luukut: uudetLuukut
+          });
+        }
+      }))));
+    });
+  }
 
-function renderLuukku(numero) {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Luukku nro ", numero));
-} // luukku { day: 1-24, header, content, href  }
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Lis\xE4\xE4 dataa joulukalenteriin"), renderLuukut());
+}
 }();
 /******/ })()
 ;
