@@ -26,9 +26,15 @@
      }
 
      function theHTML($attributes) {
+        if (!is_admin()) {
+            wp_enqueue_script('calendarFrontend', plugin_dir_url(__FILE__) . 'build/Calendar.js', array('wp-element'));
+            wp_enqueue_style('calendarFrontendStyles', plugin_dir_url(__FILE__) . 'build/Calendar.css');
+        }
+
         ob_start(); ?>
         <div class="joulukalenteri-root"><pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre></div>
-        <?php return ob_get_clean();
+        <?php 
+        return ob_get_clean();
      }
  }
 

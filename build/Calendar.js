@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.scss":
-/*!************************!*\
-  !*** ./src/index.scss ***!
-  \************************/
+/***/ "./src/Calendar.scss":
+/*!***************************!*\
+  !*** ./src/Calendar.scss ***!
+  \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14,13 +14,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "@wordpress/components":
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
 /***/ (function(module) {
 
-module.exports = window["wp"]["components"];
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "react-dom":
+/*!***************************!*\
+  !*** external "ReactDOM" ***!
+  \***************************/
+/***/ (function(module) {
+
+module.exports = window["ReactDOM"];
 
 /***/ }),
 
@@ -105,78 +115,34 @@ module.exports = window["wp"]["element"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/*!*************************!*\
+  !*** ./src/Calendar.js ***!
+  \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/index.scss");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Calendar_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Calendar.scss */ "./src/Calendar.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-let defaultWindows = [];
 
-for (let i = 0; i < 24; i++) {
-  const window = {
-    day: i + 1,
-    header: null,
-    content: null,
-    href: null
-  };
-  defaultWindows = defaultWindows.concat(window);
-}
+const root = document.querySelector('.joulukalenteri-root');
+console.log(root, 'root');
+const data = JSON.parse(root.querySelector('pre').innerHTML);
+console.log(data, 'data');
+react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Calendar, {
+  windows: data
+}), root);
 
-wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
-  title: 'Joulukalenteri',
-  icon: 'smiley',
-  category: 'common',
-  attributes: {
-    windows: {
-      type: 'array',
-      default: defaultWindows
-    }
-  },
-  edit: AdminSide,
-  save: function (props) {
-    return null;
-  }
-});
-console.log(defaultWindows, 'defaultwindows');
-
-function AdminSide(props) {
-  function renderWindows() {
-    return props.attributes.windows.map(window => {
-      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${window.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-        label: "Sis\xE4lt\xF6: ",
-        value: window.content,
-        onChange: value => {
-          const uudetLuukut = props.attributes.windows;
-          uudetLuukut[window.day - 1].content = value;
-          props.setAttributes({
-            windows: uudetLuukut
-          });
-          console.log(props.attributes.windows, 'props');
-        }
-      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-        label: "Linkki: ",
-        value: window.href,
-        onChange: value => {
-          const uudetLuukut = props.attributes.windows;
-          uudetLuukut[window.day - 1].href = value;
-          props.setAttributes({
-            windows: uudetLuukut
-          });
-        }
-      }))));
-    });
-  }
-
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Joulukalenteri admin"), renderWindows());
+function Calendar(props) {
+  console.log(props, 'asddaaddasd');
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "CALENDAR");
 }
 }();
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=Calendar.js.map

@@ -2,10 +2,10 @@ import './index.scss';
 
 import { TextControl, Flex, FlexBlock, FlexItem } from '@wordpress/components';
 
-let luukut = [];
+let defaultWindows = [];
 for (let i = 0; i < 24; i++) {
-  const luukku = { day: i + 1, header: null, content: null, href: null };
-  luukut.push(luukku);
+  const window = { day: i + 1, header: null, content: null, href: null };
+  defaultWindows = defaultWindows.concat(window);
 }
 
 wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
@@ -13,30 +13,43 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
   icon: 'smiley',
   category: 'common',
   attributes: {
-    luukut: { type: 'array', default: luukut },
+    windows: { type: 'array', default: defaultWindows },
   },
   edit: AdminSide,
-  save: (props) => {
+  save: function (props) {
     return null;
   },
 });
 
-console.log(luukut, 'asddasdsaa');
+console.log(defaultWindows, 'defaultwindows');
 
 function AdminSide(props) {
-  function renderLuukut() {
-    return props.attributes.luukut.map((luukku) => {
+  function renderWindows() {
+    return props.attributes.windows.map((window) => {
       return (
         <div>
           <Flex>
+            <p>{`Päivä ${window.day}`}</p>
             <FlexBlock>
-              {luukku.day}
               <TextControl
-                value={luukku.content}
+                label="Sisältö: "
+                value={window.content}
                 onChange={(value) => {
-                  const uudetLuukut = props.attributes.luukut;
-                  uudetLuukut[luukku.day - 1].content = value;
-                  props.setAttributes({ luukut: uudetLuukut });
+                  const uudetLuukut = props.attributes.windows;
+                  uudetLuukut[window.day - 1].content = value;
+                  props.setAttributes({ windows: uudetLuukut });
+                  console.log(props.attributes.windows, 'props');
+                }}
+              ></TextControl>
+            </FlexBlock>
+            <FlexBlock>
+              <TextControl
+                label="Linkki: "
+                value={window.href}
+                onChange={(value) => {
+                  const uudetLuukut = props.attributes.windows;
+                  uudetLuukut[window.day - 1].href = value;
+                  props.setAttributes({ windows: uudetLuukut });
                 }}
               ></TextControl>
             </FlexBlock>
@@ -48,8 +61,8 @@ function AdminSide(props) {
 
   return (
     <div>
-      <h3>Lisää dataa joulukalenteriin</h3>
-      {renderLuukut()}
+      <h3>Joulukalenteri admin</h3>
+      {renderWindows()}
     </div>
   );
 }
