@@ -33,8 +33,7 @@
 
         ob_start(); ?>
         <div class="joulukalenteri-root"><pre style="display: none;"><?php echo wp_json_encode($attributes) ?></pre></div>
-        <?php 
-        return ob_get_clean();
+        <?php return ob_get_clean();
      }
  }
 

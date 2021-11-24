@@ -129,14 +129,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // const root = document.querySelector('.joulukalenteri-root');
+// console.log(root, 'root');
+// const data = JSON.parse(root.querySelector('pre').innerHTML);
+// console.log(data, 'data');
+// ReactDOM.render(<Calendar windows={data} />, root);
 
-const root = document.querySelector('.joulukalenteri-root');
-console.log(root, 'root');
-const data = JSON.parse(root.querySelector('pre').innerHTML);
-console.log(data, 'data');
-react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Calendar, {
-  windows: data
-}), root);
+const divsToUpdate = document.querySelectorAll('.joulukalenteri-root');
+divsToUpdate.forEach(div => {
+  const data = JSON.parse(div.querySelector('pre').innerHTML);
+  console.log(data, 'asdasd');
+  react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Calendar, {
+    window: data.window
+  }), div);
+  div.classList.remove('.joulukalenteri-root');
+});
 
 function Calendar(props) {
   console.log(props, 'asddaaddasd');
