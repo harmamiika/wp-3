@@ -1,3 +1,19 @@
-.asd {
-  background-color: blue;
+.window-open {
+  background-color: #ffcccb;
+  width: auto;
+
+  list-style: none;
+  flex: 0 0 33.333333%;
+
+  .window-button {
+    margin: auto;
+  }
 }
+
+.calendarContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+// maybe import css from other project?

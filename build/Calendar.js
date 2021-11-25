@@ -1915,6 +1915,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // Render component to the screen
 
 const divsToUpdate = document.querySelectorAll('.joulukalenteri-root');
 divsToUpdate.forEach(div => {
@@ -1926,17 +1927,47 @@ divsToUpdate.forEach(div => {
 
 function Calendar(props) {
   console.log(props, 'props');
+  const propsArr = Object.keys(props).map(key => {
+    new Object(...props[key]);
+  });
+  console.log(propsArr, 'arrapr'); // data moves badly through props - need to make helper array
 
-  const tryone = () => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null);
+  const mapHelper = [...Array(24).keys()];
+  console.log(mapHelper, 'helper');
+
+  const renderCalendar = () => {
+    console.log(props, 'props');
+    return mapHelper.map(index => {
+      return renderDay(index);
+    });
   };
 
-  console.log(props, 'props2');
+  const renderDay = index => {
+    const currentDate = new Date();
+
+    if (currentDate < new Date(`2021-12-${index}` || !props[index])) {
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        className: "window-closed"
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Body, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Title, null, "P\xE4iv\xE4 ", index + 1)));
+    }
+
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      className: "window-open"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Body, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Title, null, "P\xE4iv\xE4 ", props[index].day), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Text, null, props[index].content), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "window-button"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+      href: props[index].href
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, "click me")))));
+  };
 
   const renderDayOne = () => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"], null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Body, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Title, null, "P\xE4iv\xE4 ", props.day1.day), props.day1.content, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      className: "window-open"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Body, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Title, null, "P\xE4iv\xE4 ", props.day1.day), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_4__["default"].Text, null, props.day1.content), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "window-button"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
       href: props.day1.href
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, "click me"))));
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, "click me")))));
   }; // change to current year
   // also add timezone
 
@@ -1965,7 +1996,9 @@ function Calendar(props) {
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", null, "click me")));
   };
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, "CALENDAR", renderDayOne(), renderDayTwo(), renderDayThree());
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "calendarContainer"
+  }, renderDayOne(), renderDayTwo(), renderDayThree(), renderCalendar());
 } // const root = document.querySelector('.joulukalenteri-root');
 // console.log(root, 'root');
 // const data = JSON.parse(root.querySelector('pre').innerHTML);
