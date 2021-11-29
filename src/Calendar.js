@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import Card from '@mui/material/Card';
 import { CardContent } from '@mui/material';
 import { Typography } from '@mui/material';
+import { CardActions } from '@mui/material';
 
 // Render component to the screen
 const divsToUpdate = document.querySelectorAll('.joulukalenteri-root');
@@ -46,7 +47,13 @@ function Calendar(props) {
     // or operator does not work?
     if (propsArr.length < index + 1) {
       return (
-        <Card sx={{ minHeight: 300, width: 300 }} className="window-open">
+        <Card
+          sx={{
+            minHeight: 300,
+            width: 300,
+            bgcolor: '#ffbbbb',
+          }}
+        >
           <CardContent>
             <Typography>{index + 1}</Typography>
           </CardContent>
@@ -56,7 +63,13 @@ function Calendar(props) {
 
     if (currentDate < new Date(`2021-11-${index + 1}`)) {
       return (
-        <Card sx={{ minHeight: 300, width: 300 }} className="window-open">
+        <Card
+          sx={{
+            minHeight: 300,
+            width: 300,
+            bgcolor: '#ffbbbb',
+          }}
+        >
           <CardContent>
             <Typography>{index + 1}</Typography>
           </CardContent>
@@ -65,17 +78,26 @@ function Calendar(props) {
     }
 
     return (
-      <Card sx={{ minHeight: 300, width: 300 }} className="window-open">
+      <Card
+        sx={{
+          minHeight: 300,
+          width: 300,
+          bgcolor: '#ffcccb',
+        }}
+        className="window-open"
+      >
         <CardContent>
-          <Typography>Päivä {propsArr[index].day}</Typography>
+          <Typography sx={{ marginBottom: 2 }}>
+            Päivä {propsArr[index].day}
+          </Typography>
           <Typography sx={{ fontSize: 16 }}>
             {propsArr[index].content}
           </Typography>
-          <div styles={{ margin: '0 auto' }}>
+          <CardActions>
             <a href={propsArr[index].href}>
-              <button>click me</button>
+              <button className="href-button">Lunasta</button>
             </a>
-          </div>
+          </CardActions>
         </CardContent>
       </Card>
     );

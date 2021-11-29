@@ -322,6 +322,15 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
   }
 }); // Having some issues with the wordpress-react-prop system
 // as a "quick" fix here is some very ugly duplicate code instead of a loop cause of this
+// function renderDay(dayNumber) {
+//   return (
+//     <div>
+//       <input value={props.attributes} />
+//     </div>
+//   );
+// }
+// console.log(props.attributes, 'attrs');
+// function renderDays() {} =>
 
 function AdminSide(props) {
   function renderDayOne() {
@@ -396,17 +405,511 @@ function AdminSide(props) {
     })));
   }
 
-  function renderDay(dayNumber) {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-      value: props.attributes
-    }));
+  function renderDay4() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day4.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day4.content,
+      onChange: value => {
+        props.setAttributes({
+          day4: { ...props.attributes.day4,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day4.href,
+      onChange: value => {
+        props.setAttributes({
+          day4: { ...props.attributes.day4,
+            href: value
+          }
+        });
+      }
+    })));
   }
 
-  console.log(props.attributes, 'attrs');
+  function renderDay5() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day5.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day5.content,
+      onChange: value => {
+        props.setAttributes({
+          day5: { ...props.attributes.day5,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day5.href,
+      onChange: value => {
+        props.setAttributes({
+          day5: { ...props.attributes.day5,
+            href: value
+          }
+        });
+      }
+    })));
+  }
 
-  function renderDays() {}
+  function renderDay6() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day6.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day6.content,
+      onChange: value => {
+        props.setAttributes({
+          day6: { ...props.attributes.day6,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day6.href,
+      onChange: value => {
+        props.setAttributes({
+          day6: { ...props.attributes.day6,
+            href: value
+          }
+        });
+      }
+    })));
+  }
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Joulukalenteri admin"), renderDayOne(), renderDayTwo(), renderDayThree());
+  function renderDay7() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day7.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day7.content,
+      onChange: value => {
+        props.setAttributes({
+          day7: { ...props.attributes.day7,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day7.href,
+      onChange: value => {
+        props.setAttributes({
+          day7: { ...props.attributes.day7,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay8() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day8.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day8.content,
+      onChange: value => {
+        props.setAttributes({
+          day8: { ...props.attributes.day8,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day8.href,
+      onChange: value => {
+        props.setAttributes({
+          day8: { ...props.attributes.day8,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay9() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day9.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day9.content,
+      onChange: value => {
+        props.setAttributes({
+          day9: { ...props.attributes.day9,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day9.href,
+      onChange: value => {
+        props.setAttributes({
+          day9: { ...props.attributes.day9,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay10() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day10.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day10.content,
+      onChange: value => {
+        props.setAttributes({
+          day10: { ...props.attributes.day10,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day10.href,
+      onChange: value => {
+        props.setAttributes({
+          day10: { ...props.attributes.day10,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay11() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day11.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day11.content,
+      onChange: value => {
+        props.setAttributes({
+          day11: { ...props.attributes.day11,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day11.href,
+      onChange: value => {
+        props.setAttributes({
+          day11: { ...props.attributes.day11,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay12() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day12.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day12.content,
+      onChange: value => {
+        props.setAttributes({
+          day12: { ...props.attributes.day12,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day12.href,
+      onChange: value => {
+        props.setAttributes({
+          day12: { ...props.attributes.day12,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay13() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day13.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day13.content,
+      onChange: value => {
+        props.setAttributes({
+          day13: { ...props.attributes.day13,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day13.href,
+      onChange: value => {
+        props.setAttributes({
+          day13: { ...props.attributes.day13,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay14() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day14.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day14.content,
+      onChange: value => {
+        props.setAttributes({
+          day14: { ...props.attributes.day14,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day14.href,
+      onChange: value => {
+        props.setAttributes({
+          day14: { ...props.attributes.day14,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay15() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day15.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day15.content,
+      onChange: value => {
+        props.setAttributes({
+          day15: { ...props.attributes.day15,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day15.href,
+      onChange: value => {
+        props.setAttributes({
+          day15: { ...props.attributes.day15,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay16() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day16.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day16.content,
+      onChange: value => {
+        props.setAttributes({
+          day16: { ...props.attributes.day16,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day16.href,
+      onChange: value => {
+        props.setAttributes({
+          day16: { ...props.attributes.day16,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay17() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day17.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day17.content,
+      onChange: value => {
+        props.setAttributes({
+          day17: { ...props.attributes.day17,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day17.href,
+      onChange: value => {
+        props.setAttributes({
+          day17: { ...props.attributes.day17,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay18() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day18.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day18.content,
+      onChange: value => {
+        props.setAttributes({
+          day18: { ...props.attributes.day18,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day18.href,
+      onChange: value => {
+        props.setAttributes({
+          day18: { ...props.attributes.day18,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay19() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day19.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day19.content,
+      onChange: value => {
+        props.setAttributes({
+          day19: { ...props.attributes.day19,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day19.href,
+      onChange: value => {
+        props.setAttributes({
+          day19: { ...props.attributes.day19,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay20() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day20.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day20.content,
+      onChange: value => {
+        props.setAttributes({
+          day20: { ...props.attributes.day20,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day20.href,
+      onChange: value => {
+        props.setAttributes({
+          day20: { ...props.attributes.day20,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay21() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day21.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day21.content,
+      onChange: value => {
+        props.setAttributes({
+          day21: { ...props.attributes.day21,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day21.href,
+      onChange: value => {
+        props.setAttributes({
+          day21: { ...props.attributes.day21,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay22() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day22.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day22.content,
+      onChange: value => {
+        props.setAttributes({
+          day22: { ...props.attributes.day22,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day22.href,
+      onChange: value => {
+        props.setAttributes({
+          day22: { ...props.attributes.day22,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay23() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day23.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day23.content,
+      onChange: value => {
+        props.setAttributes({
+          day23: { ...props.attributes.day23,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day23.href,
+      onChange: value => {
+        props.setAttributes({
+          day23: { ...props.attributes.day23,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  function renderDay24() {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, `Päivä ${props.attributes.day24.day}`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Sis\xE4lt\xF6: ",
+      value: props.attributes.day24.content,
+      onChange: value => {
+        props.setAttributes({
+          day24: { ...props.attributes.day24,
+            content: value
+          }
+        });
+      }
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexBlock, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+      label: "Linkki: ",
+      value: props.attributes.day24.href,
+      onChange: value => {
+        props.setAttributes({
+          day24: { ...props.attributes.day24,
+            href: value
+          }
+        });
+      }
+    })));
+  }
+
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Joulukalenteri admin"), renderDayOne(), renderDayTwo(), renderDayThree(), renderDay4(), renderDay5(), renderDay6(), renderDay7(), renderDay8(), renderDay9(), renderDay10(), renderDay11(), renderDay12(), renderDay13(), renderDay14(), renderDay15(), renderDay16(), renderDay17(), renderDay18(), renderDay19(), renderDay20(), renderDay21(), renderDay22(), renderDay23(), renderDay24());
 } // function renderWindows2() {
 //   const windows = [
 //     1,

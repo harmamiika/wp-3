@@ -42,6 +42,18 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
 // Having some issues with the wordpress-react-prop system
 // as a "quick" fix here is some very ugly duplicate code instead of a loop cause of this
 
+// function renderDay(dayNumber) {
+//   return (
+//     <div>
+//       <input value={props.attributes} />
+//     </div>
+//   );
+// }
+
+// console.log(props.attributes, 'attrs');
+
+// function renderDays() {} =>
+
 function AdminSide(props) {
   function renderDayOne() {
     return (
@@ -127,17 +139,573 @@ function AdminSide(props) {
     );
   }
 
-  function renderDay(dayNumber) {
+  function renderDay4() {
     return (
       <div>
-        <input value={props.attributes} />
+        <p>{`Päivä ${props.attributes.day4.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day4.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day4: { ...props.attributes.day4, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day4.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day4: { ...props.attributes.day4, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
       </div>
     );
   }
-
-  console.log(props.attributes, 'attrs');
-
-  function renderDays() {}
+  function renderDay5() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day5.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day5.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day5: { ...props.attributes.day5, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day5.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day5: { ...props.attributes.day5, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay6() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day6.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day6.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day6: { ...props.attributes.day6, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day6.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day6: { ...props.attributes.day6, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay7() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day7.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day7.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day7: { ...props.attributes.day7, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day7.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day7: { ...props.attributes.day7, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay8() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day8.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day8.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day8: { ...props.attributes.day8, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day8.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day8: { ...props.attributes.day8, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay9() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day9.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day9.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day9: { ...props.attributes.day9, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day9.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day9: { ...props.attributes.day9, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay10() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day10.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day10.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day10: { ...props.attributes.day10, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day10.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day10: { ...props.attributes.day10, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay11() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day11.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day11.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day11: { ...props.attributes.day11, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day11.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day11: { ...props.attributes.day11, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay12() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day12.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day12.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day12: { ...props.attributes.day12, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day12.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day12: { ...props.attributes.day12, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay13() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day13.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day13.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day13: { ...props.attributes.day13, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day13.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day13: { ...props.attributes.day13, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay14() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day14.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day14.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day14: { ...props.attributes.day14, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day14.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day14: { ...props.attributes.day14, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay15() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day15.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day15.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day15: { ...props.attributes.day15, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day15.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day15: { ...props.attributes.day15, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay16() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day16.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day16.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day16: { ...props.attributes.day16, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day16.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day16: { ...props.attributes.day16, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay17() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day17.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day17.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day17: { ...props.attributes.day17, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day17.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day17: { ...props.attributes.day17, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay18() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day18.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day18.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day18: { ...props.attributes.day18, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day18.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day18: { ...props.attributes.day18, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay19() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day19.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day19.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day19: { ...props.attributes.day19, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day19.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day19: { ...props.attributes.day19, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay20() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day20.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day20.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day20: { ...props.attributes.day20, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day20.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day20: { ...props.attributes.day20, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay21() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day21.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day21.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day21: { ...props.attributes.day21, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day21.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day21: { ...props.attributes.day21, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay22() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day22.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day22.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day22: { ...props.attributes.day22, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day22.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day22: { ...props.attributes.day22, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay23() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day23.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day23.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day23: { ...props.attributes.day23, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day23.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day23: { ...props.attributes.day23, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
+  function renderDay24() {
+    return (
+      <div>
+        <p>{`Päivä ${props.attributes.day24.day}`}</p>
+        <TextControl
+          label="Sisältö: "
+          value={props.attributes.day24.content}
+          onChange={(value) => {
+            props.setAttributes({
+              day24: { ...props.attributes.day24, content: value },
+            });
+          }}
+        ></TextControl>
+        <FlexBlock>
+          <TextControl
+            label="Linkki: "
+            value={props.attributes.day24.href}
+            onChange={(value) => {
+              props.setAttributes({
+                day24: { ...props.attributes.day24, href: value },
+              });
+            }}
+          ></TextControl>
+        </FlexBlock>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -145,6 +713,27 @@ function AdminSide(props) {
       {renderDayOne()}
       {renderDayTwo()}
       {renderDayThree()}
+      {renderDay4()}
+      {renderDay5()}
+      {renderDay6()}
+      {renderDay7()}
+      {renderDay8()}
+      {renderDay9()}
+      {renderDay10()}
+      {renderDay11()}
+      {renderDay12()}
+      {renderDay13()}
+      {renderDay14()}
+      {renderDay15()}
+      {renderDay16()}
+      {renderDay17()}
+      {renderDay18()}
+      {renderDay19()}
+      {renderDay20()}
+      {renderDay21()}
+      {renderDay22()}
+      {renderDay23()}
+      {renderDay24()}
     </div>
   );
 }

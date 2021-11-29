@@ -31,10 +31,23 @@
 //   }
 // }
 
+.button-container {
+  margin-top: 20px;
+  margin: auto;
+}
+
 .calendarContainer {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
+}
+
+.href-button {
+  background-color: #8b0000;
+
+  &:hover {
+    background-color: #500202;
+  }
 }
 
 // maybe import css from other project?
