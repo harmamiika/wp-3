@@ -39,6 +39,9 @@ wp.blocks.registerBlockType('ourplugin/joulukalenteri', {
   },
 });
 
+// Having some issues with the wordpress-react-prop system
+// as a "quick" fix here is some very ugly duplicate code instead of a loop cause of this
+
 function AdminSide(props) {
   function renderDayOne() {
     return (

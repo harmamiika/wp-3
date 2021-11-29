@@ -1,14 +1,35 @@
-.window-open {
-  background-color: #ffcccb;
-  width: auto;
+// s
+// .window {
+//   list-style: none;
+//   flex: 0 0 33.333333%;
 
-  list-style: none;
-  flex: 0 0 33.333333%;
+//   height: 2000px;
+//   width: auto;
+//   min-height: 300px;
 
-  .window-button {
-    margin: auto;
-  }
-}
+//   border: solid;
+//   border-width: 2px;
+//   border-color: red;
+//   height: 100%;
+// }
+
+// .window-open {
+//   background-color: #ffcccb;
+//   height: 100%;
+
+//   .window-button {
+//     margin: auto;
+//   }
+// }
+
+// .window-closed {
+//   background-color: #fa7674;
+//   height: 100%;
+
+//   .title {
+//     text-align: center;
+//   }
+// }
 
 .calendarContainer {
   display: flex;
